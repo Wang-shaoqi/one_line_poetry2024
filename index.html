@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>驚煌詩色</title>
+	<link href="favicon.ico" rel="shortcut icon" />
+    <link href="favicon.ico" rel="bookmark" />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	  
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	  
+    <style type="text/css">
+        
+		body{
+			background:linear-gradient(180deg,#FFFDE1 40%,#D5BC79);
+		}
+		
+		#nav{background-color: #203F6F;}
+		#fb,
+		#ins{
+			color: #fff; 
+			font-size: 25pt;
+			position: absolute;
+			cursor: pointer;
+			text-decoration: none;
+		}
+		
+		#fb{
+			right: 80px;
+		}
+		#ins{
+			right: 30px;
+		}
+		
+		
+		
+		#no2{
+			position: absolute;
+			right: 0;
+			height: min(max(50vw, 35vh),50vh);
+			animation: titlemove 6s ease-in-out infinite;
+		}
+
+		#no4{
+			position: absolute;
+			bottom: -5vh;
+			left: 0;
+			height: min(max(60vw, 300px),70vh);
+			animation: titlemove 6s ease-in-out infinite;
+		}
+		@keyframes titlemove {
+			0% {
+				transform: translate(0, 0%);	
+			}
+			50% {
+				transform: translate(0, 4%);
+			}
+			100% {
+				transform: translate(0, 0%);
+			}
+		}
+		
+		
+		
+		#title_text{
+			-webkit-writing-mode: vertical-rl;
+			writing-mode: vertical-rl ;
+			font-weight: 600;
+		}
+		#title_img{
+			animation: move 6s ease-in-out infinite;
+			vertical-align: middle;
+			margin-right: -30px;
+			width: 3vw;
+			height:  3vw;
+		}
+		#minor_title{
+/*			margin-top: min(max(10vw,5px),53px);*/
+/*			margin-right: min(max(5vw,2px),300px);*/
+			margin-top: 1.1em;
+			margin-right: 1.1em;
+			font-weight: 500;
+			animation: titlemove 6s ease-in-out infinite;
+		}
+		.word-1{font-size: 0;}
+		.word-1 span {
+			text-decoration: none;
+/*			font-size: min(max(6vw,32px),50px);*/
+			font-size: 4vw;
+			display: inline-block;
+			animation: move 6s ease-in-out infinite;
+			margin-bottom: min(max(1.9vw,1px),15px);
+			color: #EDD582;
+		}
+		#minor_title span{
+			display: inline-block;
+			font-weight: 500;
+			color:#203F6F;
+			line-height: 1.6em;
+/*			font-size: min(max(4vw,12px),21px);*/
+			font-size: 1.5vw;
+		}
+		@keyframes move {
+			0% {
+				transform: translate(0, 0%);
+				
+			}
+			25% {
+				text-shadow: 0 25px 50px #EDD582;
+				color: #203F6F;
+			}
+			50% {
+				transform: translate(0, 5%);
+			}
+			75% {
+				text-shadow: 0 25px 50px #EDD582;
+				color: #203F6F;
+			}
+			100% {
+				transform: translate(0, 0%);
+			}		
+		}
+
+		.word-1 span:nth-child(2) {
+			animation-delay: 0.5s;
+		}
+
+		.word-1 span:nth-child(3) {
+			animation-delay: 1s;
+		}
+
+		.word-1 span:nth-child(4) {
+			animation-delay: 2s;
+		}
+
+		.word-1 span:nth-child(5) {
+			animation-delay: 3s;
+		}
+
+		
+		
+		#introduce h1{
+			color: #203f6f;
+			font-weight: 700;
+			font-size: 3em;
+		}
+		.small-text p{font-size: min(max(1.3vw,18px),23px);}
+		.chac-des{
+/*			font-size: 1.8em;*/
+			font-size: 160%;
+			color:#8C4921;
+			font-weight: 600;
+		}
+		.ind{text-indent: 2em;}
+		
+		.head_title{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		
+		
+		
+		.text{
+			color: #4A3513; 
+			font-weight: 500;
+			font-size: 1.3em;
+			text-shadow: 0 0 7px #ffffff;
+			text-indent: 2em;
+		}
+		.box{
+			box-sizing: border-box;
+			background-color: #fff;
+			width:100%;
+			height: 85vh;
+			min-height: 500px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		
+		#q_text{
+			border: 5px solid #D6BE7D;
+			background-color: #244173;
+			width: 85%;
+			height: 70vh;
+			min-height: 400px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.question_title a{text-decoration: none;}
+		#question_answer{
+			margin-top: 10px;
+			display:none;
+/*			display: none;透明度跟margin-bottom要改掉*/
+			margin-bottom: -7vh;
+		}
+		.question_title h1{
+			color: #fff;
+			font-weight: 700;
+			font-size: min(max(5vw, 22px), 40px);
+/*			background-color: #244173;*/
+			border-radius: 5px;
+			padding: 5px 0;
+			margin: 0 0 20px;
+		}
+		#answer1,#answer2,#answer3{
+			color: #fff;
+			font-weight: 900;
+			font-size: min(max(3vw, 12px), 20px);
+			border-radius: 30px;
+			cursor: pointer;
+			background-color: #3D6BB9;
+		}
+
+		#a-box,#b-box,#c-box{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 0;
+		}
+		#a,#b,#c{
+			z-index: 1;
+			height: 2.7em;
+			margin-right: -.8em;	
+		}
+		#neednone{
+			color: #fff;
+			margin-top:-20px;
+			font-size: min(max(3vw, 12px), 18px);
+			cursor: pointer;
+		}
+		#next_q{
+			color: #fff;
+			font-size: min(max(3vw, 12px), 18px);
+		}
+		
+		
+		
+		
+		.box1{
+			padding: 80px 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.box1:before{
+			content: '';
+			flex-grow: .5;
+		}
+		audio
+		{
+			-webkit-transition:all 0.5s linear;
+			-moz-transition:all 0.5s linear;
+			-o-transition:all 0.5s linear;
+			transition:all 0.5s linear;
+			-moz-box-shadow: 2px 2px 4px 0px #D5BC79;
+			-webkit-box-shadow:  2px 2px 4px 0px #D5BC79;
+			box-shadow: 2px 2px 4px 0px #D5BC79;
+			-moz-border-radius:7px 7px 7px 7px ;
+			-webkit-border-radius:30px ;
+			border-radius:30px ;
+		}
+
+		audio:hover, audio:focus, audio:active
+		{
+			-webkit-box-shadow: 8px 18x 10px rgba(77,59,20,0.4);
+			-moz-box-shadow: 8px 8px 10px rgba(77,59,20,0.4);
+			box-shadow: 8px 8px 10px rgba(77,59,20,0.4);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			transform: scale(1.05);
+		}
+		
+		#foot{
+
+		width: 100%;
+
+		display: inline-block;
+
+		background-color: #FFFFFF;
+
+		padding: 20px;
+			
+		text-align: center;
+
+	}
+
+    </style>
+  </head>
+  <body>
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark">
+        <a href="http://203.71.210.16/~npmpoetry/index.html"><img src="img/title.png" height="40vmin" alt=""/></a>
+        <a id="ins" href="https://www.instagram.com/npm_poetry/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a id="fb" href="https://www.facebook.com/npmpoetry/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>	
+	</nav>
+    
+ 
+	  <img id="no2" src="https://theme.npm.edu.tw/exh104/giuseppecastiglione/common/images/deco_2.png" alt="">
+
+	  <img id="no4" src="https://theme.npm.edu.tw/exh104/giuseppecastiglione/common/images/deco_6.png" alt="">
+	  
+	  <div class="container-fluid min-vh-100 d-flex justify-content-center" id="section_title">
+		<div class="row w-100 flex-row-reverse justify-content-center align-items-center">
+			
+			<a href="#introduce">
+				<div id="title_text" class="col-lg-12 col-12 d-flex flex-column justify-content-center align-items-start">
+					<img id="title_img" src="img/red circle.png" alt="">
+					
+					<div class="word-1">
+					  <span>驚</span>
+					  <span>煌</span>
+					  <span>詩</span>
+					  <span>色</span>
+					</div>
+	
+					<div id="minor_title">
+						<div class="words word-2">
+						  <span>郎世寧邀你走進３００年前</span><br>
+						  <span id="needani"> 與皇帝對坐</span><br>
+						  <span>看諸國進貢奇珍異獸</span><br>
+						  <span>看宮廷畫師神筆丹青</span><br>
+						  <span>看王國在色彩中盡灑輝煌</span><br>
+						  <span>用一行詩寫出你的藝術共感</span>
+						</div>
+					</div>
+	
+				</div>
+			</a>
+		</div>
+	  </div>
+	  
+     <section id="introduce" class="mr-3 ml-3 min-vh-100">
+      <div class="introduce_con container h-100 col-xl-7 col-lg-12 min-vh-100 h-100">
+        <div class="introduce_row row text-center justify-content-around align-items-center mt-5 mb-5">
+         	<div class="chac-des col-md-4 col-12">
+				<p>國籍：義大利<br>1688年7月-1766年7月</p>
+			</div>
+			<div class="col-md-4 col-12">
+				<img src="img/main-character.png" alt="">
+			<a href="https://www.youtube.com/watch?v=4YlRa-ipbBY" target="_blank" style="text-decoration:none;cursor:auto;"><h1 class="mb-4 mt-4" font-size="3em">郎世寧</h1></a>
+			</div>
+			<div class="chac-des col-md-4 col-12">
+		 		<p>本名：朱塞佩．卡斯提永尼<br>（Giuseppe Castiglione）</p>
+			</div>
+			<div>
+				<audio controls preload="metadata" width="50px">
+					   <source src="record/main-character-record.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+			<div class="small-text col-12 text-left mt-5">
+				<p class="text">
+				郎世寧是清代的宮廷畫家，光從名字看起來，沒有人想到他是個外國人。其實他原名叫朱塞佩．卡斯提永尼（Giuseppe Castiglione），是義大利人。康熙五十四年(西元1714年)，二十七歲的朱塞佩．卡斯提永尼以耶穌會傳教士的身分到中國，取了漢名叫「郎世寧」，就此展開他在中國五十多年的宮廷藝術生涯。
+				</p>
+				<p class="text">
+				郎世寧一開始想到中國傳教，但卻因為繪畫成就進入宮廷並為康熙、雍正、乾隆三位皇帝服務，創作了大量的作品。乾隆即位後，雅好藝術，相當賞識郎世寧。郎世寧為皇帝繪製了許多精美的作品，題材囊括人物、風景、花鳥、動物等。透過他靈敏的觀察力與精湛的技藝，記錄了清朝慶典、習俗及重大政治活動，並為乾隆皇帝的文治武功，留下了生動的形象資料。
+				</p>
+				<p class="text">
+				乾隆三十一年(1766)，郎世寧病逝北京，享壽78歲。綜觀郎世寧一生，以一個外國人可以在中國宮廷任職長達半世紀，並受到皇帝的重用，可算是中國藝術與宮廷史的傳奇故事之一。
+				</p>
+				<p class="text">
+				郎世寧入境隨俗，運用中國傳統顏料、毛筆、紙絹，將中國與西洋繪畫巧妙的融合，開創前所未有的新畫風，也將油畫、透視法等西洋繪畫技巧與觀念傳授給中國畫家，使得清代宮廷繪畫呈現出中西合璧的特殊面貌，影響了很多同僚及學生。他多才多藝，集傳教士、畫家、工藝、建築設計師於一身，在中西文化交流上有著重大貢獻與卓越成就。
+				</p>
+				
+			</div>  
+        </div>
+      </div>
+    </section>
+	  
+  	<section id="question" class="box1">
+      <div class="container">
+        <div class="row">
+			  <div class="box">
+			  	<div class="text-center" id="q_text">
+					<div class="col-12 question_title" id="question_title">
+					  <h1 class="col-12 title" id="start_btn">機智問答大挑戰</h1>
+					  <span id="next_q"></span><p id="neednone">《點我開始遊戲》</p>
+					  <div class="flex-wrap justify-content-center" id="question_answer">
+						  <div id="a-box" class="col-md-4 col-8 mb-2">
+							   <img id="a" src="img/A.png" alt="">
+							   <div id="answer1" class="col-10">英國</div>
+						  </div>
+						  <div id="b-box" class="col-md-4 col-8 mb-2">
+							   <img id="b" src="img/B.png" alt="">
+							   <div id="answer2" class="col-10">法國</div>
+						  </div>
+						  <div id="c-box" class="col-md-4 col-8 mb-2">
+							   <img id="c" src="img/C.png" alt="">
+							   <div id="answer3" class="col-10">義大利</div>
+						  </div>
+					  </div>
+					</div>
+				</div>
+			  </div>
+        </div>
+      </div>
+    </section>
+	  
+	<div id="foot">
+
+		<img src="https://www.npm.gov.tw/images/logo.svg" alt="" height="35">
+
+		
+
+	</div>  
+
+	  
+	  
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+	  
+	  
+	  
+	<script>
+      //手動調整標題大小
+	  var word1 = document.getElementsByClassName("word-1");
+	  var titleSapn = word1[0].getElementsByTagName("span");
+      var word2 = document.getElementsByClassName("word-2");
+      var minorTitleSpan = word2[0].getElementsByTagName("span");
+	  var clientWidth = document.body.clientWidth;
+	  if(clientWidth < 500){
+		   console.log("clientWidth" + clientWidth);
+		  for(var i = 0; i < titleSapn.length; i++){
+			  titleSapn[i].style.fontSize = "8vw"; 
+		  };
+          for(i = 0; i < minorTitleSpan.length; i++){
+              minorTitleSpan[i].style.fontSize = "4vw";
+          };
+	  };
+	  if(clientWidth > 500){
+		  for(var i = 0; i < titleSapn.length; i++){
+			  titleSapn[i].style.fontSize = "4vw"; 
+		  };
+          for(i = 0; i < minorTitleSpan.length; i++){
+              minorTitleSpan[i].style.fontSize = "1.5vw";
+          };
+	  };
+		
+	  var question_answer = document.getElementById("question_answer");
+	  var startCount = false; console.log(startCount);
+	  var choseCount = 0;
+	  var nextCount = 1;
+	  var startBtn = document.getElementById("start_btn");//第一句需要全部替換(為了也替換掉id startbtn)
+//	  startBtn.addEventListener("click",start);
+	  var needDone = document.getElementById("neednone");
+	  needDone.addEventListener("click",start);
+	  function start(){
+		  //把第一句全換掉
+		  //把neednone  p的提醒變成空字串 outerHTML
+		  //把定位取消掉
+		  if(startCount === false){
+			  startBtn.innerHTML = 'Q1.郎世寧原是哪一國人?';
+			  document.getElementById("neednone").outerHTML = '';
+			  question_answer.style.display = "flex";
+			  question_answer.style.marginBottom = 0;
+			  choseCount++;
+			  startCount = true;
+//			  console.log("choseCount" + choseCount);
+//			  console.log("startCount" + startCount);
+//			  console.log("nextCount" + nextCount);
+		  };
+		  
+	  };
+		
+		
+	  //各個選項點到後
+	  var answer1 = document.getElementById("answer1"); 
+	  answer1.addEventListener("click",ans1);
+	  function ans1(){
+		  switch(choseCount){
+			  case 1:
+				  //把選項隱藏
+				  //把第一句內文換掉 答錯囉 答案是xxx
+				  //把next_q.innerHTML 加字 下一題
+				  clickChoseWron(1);
+				  break;
+			  case 2:
+				  clickChoseWron(2);
+				  break;
+			  case 3:
+				  clickChoseWron(3);
+				  break;
+			  case 4:
+				  clickChoseRight(4);
+				  break;
+			  case 5:
+				  gamedone();
+		  	   	  startBtn.innerHTML = "答錯囉~是乾隆<br>問答結束<br>接下來是挑選畫作";
+				  break;
+              default:
+                  break;
+		  };
+	  };
+		
+      var answer2 = document.getElementById("answer2"); 
+	  answer2.addEventListener("click",ans2);
+	  function ans2(){
+		  switch(choseCount){
+			  case 1:
+				  //把選項隱藏
+				  //把第一句內文換掉 答錯囉 答案是xxx
+				  //把next_q.innerHTML 加字 下一題
+				  clickChoseWron(1);
+				  break;
+			  case 2:
+				  clickChoseRight(2);
+				  break;
+			  case 3:
+				  clickChoseRight(3);
+				  break;
+			  case 4:
+				  clickChoseWron(4);
+				  break;
+			  case 5:
+				  gamedone();
+		  		  startBtn.innerHTML = "答錯囉~是乾隆<br>問答結束<br>接下來是挑選畫作";
+				  break;
+              default:
+                  break;
+		  };
+	  };
+	  
+	  var answer3 = document.getElementById("answer3"); 
+	  answer3.addEventListener("click",ans3);
+	  function ans3(){
+		  switch(choseCount){
+			  case 1:
+				  //把選項隱藏
+				  //把第一句內文換掉 答錯囉 答案是xxx
+				  //把next_q.innerHTML 加字 下一題
+				  clickChoseRight(1);
+				  break;
+			  case 2:
+				  clickChoseWron(2);
+				  break;
+			  case 3:
+				  clickChoseWron(3);
+				  break;
+			  case 4:
+				  clickChoseWron(4);
+				  break;
+			  case 5:
+				  gamedone();
+		  		  startBtn.innerHTML = "恭喜答對~<br>問答結束<br>接下來是挑選畫作";
+				  break;
+              default:
+                  break;
+		  };
+	  };
+		
+		
+	  //回覆問題總結	
+	  function clickChoseWron(whichNum){
+		  vanishChose();
+		  wronReply(whichNum-1);
+		  choseCount++;
+//		  console.log("choseCount" + choseCount);
+	  };
+	  function clickChoseRight(whichNum){
+		  vanishChose();
+		  rightReply(whichNum-1);
+		  choseCount++;
+//		  console.log("choseCount" + choseCount);
+	  };	
+		
+		
+		
+		
+	  var nextQ = document.getElementById("next_q");
+	  //點到下一題(next_q  的span)後 換成下一題
+	  nextQ.addEventListener("click",chQ);
+	  function chQ(){
+		  switch(nextCount){
+			  case 1:
+			  //把標題改成第二題
+			  //把下一題隱藏
+			  //把answer1~3裡的選項改掉 並 顯示回來
+			  	  chQwrap(2);
+				  break;
+			  case 2:
+				  chQwrap(3);
+				  break;
+			  case 3:
+				  chQwrap(4);
+				  break;
+			  case 4:
+				  chQwrap(5);
+				  break;
+              default:
+                  break;
+		  };
+	  };
+	  
+	  //問問題總結
+	  function chQwrap(whichNum){
+		  changeQTitle(whichNum-1);
+		  changeChose(whichNum-1);
+		  showChose();
+		  nextCount++;
+//		  console.log("nextCount" + nextCount);
+	  };
+	  //五題測驗結束(nextCount是5)
+	  function gamedone(){
+		  vanishChose();
+		  nextQ.innerHTML = '<a href="artall.html" target="_blank" style="text-decoration:none;color:#fff;">《點我前往觀賞畫作》</a>';
+		  nextQ.style.cursor = "pointer";
+	  };
+		
+		
+		
+		
+	  //其他函式
+	  //把選項弄消失  opacity: 0透明度跟margin-bottom要改掉margin-bottom: -8vh;
+			
+	  function vanishChose(){
+		  question_answer.style.display = "none";
+		  question_answer.style.marginBottom = "-4vh";
+		  answer1.style.cursor = "auto";
+		  answer2.style.cursor = "auto";
+		  answer3.style.cursor = "auto";
+	  };
+
+	  //把選項弄回來
+	  function showChose(){
+		  question_answer.style.display = "flex";
+		  question_answer.style.marginBottom = 0;
+		  answer1.style.cursor = "pointer";
+		  answer2.style.cursor = "pointer";
+		  answer3.style.cursor = "pointer";
+	  }
+	  //改選項內容
+	  //第幾題 題目 ABC的答案
+	  var myarray = [
+		  {num: 1, title: "Q1.郎世寧原是哪一國人?", answerA: "英國", answerB: "法國", answerC: "義大利", wronReply: "答錯囉~是義大利", rightReply: "恭喜答對!<br>往下一題邁進吧"},
+		  {num: 2, title: "Q2.郎世寧幾歲時到中國?", answerA: "17歲", answerB: "27歲", answerC: "37歲", wronReply: "答錯囉~是27歲", rightReply: "恭喜答對!<br>往下一題邁進吧"},
+		  {num: 3, title: "Q3.清朝時郎世寧到中國的目的?", answerA: "留學", answerB: "傳教", answerC: "參訪", wronReply: "答錯囉~是傳教", rightReply: "恭喜答對!<br>往下一題邁進吧"},
+		  {num: 4, title: "Q4.哪幾位皇帝曾當過郎世寧的老闆?", answerA: "   康熙、雍正、乾隆", answerB: "   嘉慶、道光、咸豐", answerC: "   同治、光緒、宣統", wronReply: "答錯囉~是康熙、雍正、乾隆", rightReply: "恭喜答對!<br>往下一題邁進吧"},
+		  {num: 5, title: "Q5.郎世寧運用他靈敏的觀察力與繪畫技巧，將皇帝的文治武功，留下生動的形象資料，他因此成了這位皇帝的御前首席宮廷畫家，請問這位皇帝是誰?", answerA: "康熙", answerB: "雍正", answerC: "乾隆", wronReply: "答錯囉~是乾隆", rightReply: "恭喜答對!<br>往下一題邁進吧"}
+	  ];
+		
+	  var myanswer1 = document.getElementById("answer1");
+	  var myanswer2 = document.getElementById("answer2");
+      var myanswer3 = document.getElementById("answer3");
+	  function changeChose(whichNum){
+		  myanswer1.innerHTML = myarray[whichNum].answerA;
+		  myanswer2.innerHTML = myarray[whichNum].answerB;
+		  myanswer3.innerHTML = myarray[whichNum].answerC;
+	  };
+	  
+		
+	  //改標題(新題目的標題) 跟 讓下一題不見
+	  function changeQTitle(whichNum){
+		 startBtn.innerHTML = myarray[whichNum].title;
+		 nextQ.innerHTML = "";
+		 nextQ.style.cursor = "auto";
+	  };
+		
+		
+	  //改標題(回答後的回應 錯和對) 跟 讓下一題出現
+	  function wronReply(whichNum){
+		 startBtn.innerHTML = myarray[whichNum].wronReply;
+		 nextQ.innerHTML = "《下一題》";
+		 nextQ.style.cursor = "pointer";
+	  };
+	  function rightReply(whichNum){
+		 startBtn.innerHTML = myarray[whichNum].rightReply;
+		 nextQ.innerHTML = "《下一題》";
+		 nextQ.style.cursor = "pointer";
+	  };
+	</script>
+	  
+	  
+  </body>
+</html>

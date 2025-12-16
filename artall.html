@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>驚煌詩色</title>
+	<link href="favicon.ico" rel="shortcut icon" />
+    <link href="favicon.ico" rel="bookmark" />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	  
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	  
+    <style type="text/css">
+        
+		body{
+			background:linear-gradient(180deg,#FFFDE1 40%,#D5BC79);
+		}
+		
+		#nav{background-color: #203F6F;}
+		#fb,
+		#ins{
+			color: #fff; 
+			font-size: 25pt;
+			position: absolute;
+			cursor: pointer;
+			text-decoration: none;
+		}
+		
+		#fb{
+			right: 80px;
+		}
+		#ins{
+			right: 30px;
+		}
+		
+		
+		
+		#no2{
+			position: absolute;
+			right: 0;
+			height: min(max(50vw, 35vh),50vh);
+			animation: titlemove 6s ease-in-out infinite;
+		}
+
+		#no4{
+			position: absolute;
+			bottom: -5vh;
+			left: 0;
+			height: min(max(60vw, 300px),70vh);
+			animation: titlemove 6s ease-in-out infinite;
+		}
+		@keyframes titlemove {
+			0% {
+				transform: translate(0, 0%);	
+			}
+			50% {
+				transform: translate(0, 4%);
+			}
+			100% {
+				transform: translate(0, 0%);
+			}
+		}
+		
+		
+		
+		#title_text{
+			-webkit-writing-mode: vertical-rl;
+			writing-mode: vertical-rl ;
+			font-weight: 600;
+		}
+		#title_img{
+			animation: move 6s ease-in-out infinite;
+			vertical-align: middle;
+			margin-right: -30px;
+			width: 3vw;
+			height:  3vw;
+		}
+		#minor_title{
+/*			margin-top: min(max(10vw,5px),53px);*/
+/*			margin-right: min(max(5vw,2px),300px);*/
+			margin-top: 1.1em;
+			margin-right: 1.1em;
+			font-weight: 500;
+			animation: titlemove 6s ease-in-out infinite;
+		}
+		.word-1{font-size: 0;}
+		.word-1 span {
+			text-decoration: none;
+/*			font-size: min(max(6vw,32px),50px);*/
+			font-size: 4vw;
+			display: inline-block;
+			animation: move 6s ease-in-out infinite;
+			margin-bottom: min(max(1.9vw,1px),15px);
+			color: #EDD582;
+		}
+		#minor_title span{
+			display: inline-block;
+			font-weight: 500;
+			color:#203F6F;
+			line-height: 1.6em;
+/*			font-size: min(max(4vw,12px),21px);*/
+			font-size: 1.5vw;
+		}
+		@keyframes move {
+			0% {
+				transform: translate(0, 0%);
+				
+			}
+			25% {
+				text-shadow: 0 25px 50px #EDD582;
+				color: #203F6F;
+			}
+			50% {
+				transform: translate(0, 5%);
+			}
+			75% {
+				text-shadow: 0 25px 50px #EDD582;
+				color: #203F6F;
+			}
+			100% {
+				transform: translate(0, 0%);
+			}		
+		}
+
+		.word-1 span:nth-child(2) {
+			animation-delay: 0.5s;
+		}
+
+		.word-1 span:nth-child(3) {
+			animation-delay: 1s;
+		}
+
+		.word-1 span:nth-child(4) {
+			animation-delay: 2s;
+		}
+
+		.word-1 span:nth-child(5) {
+			animation-delay: 3s;
+		}
+
+		
+		
+		#introduce h1{
+			color: #203f6f;
+			font-weight: 700;
+			font-size: 3em;
+		}
+		.small-text p{font-size: min(max(1.3vw,18px),23px);}
+		.chac-des{
+/*			font-size: 1.8em;*/
+			font-size: 160%;
+			color:#8C4921;
+			font-weight: 600;
+		}
+		.ind{text-indent: 2em;}
+		
+		.head_title{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		
+		
+		
+		.text{
+			color: #4A3513; 
+			font-weight: 500;
+			font-size: 1.3em;
+			text-shadow: 0 0 7px #ffffff;
+			text-indent: 2em;
+		}
+		.box{
+			box-sizing: border-box;
+			background-color: #fff;
+			width:100%;
+			height: 85vh;
+			min-height: 500px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		
+		#q_text{
+			border: 5px solid #D6BE7D;
+			background-color: #244173;
+			width: 85%;
+			height: 70vh;
+			min-height: 400px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.question_title a{text-decoration: none;}
+		#question_answer{
+			margin-top: 10px;
+			display:none;
+/*			display: none;透明度跟margin-bottom要改掉*/
+			margin-bottom: -7vh;
+		}
+		.question_title h1{
+			color: #fff;
+			font-weight: 700;
+			font-size: min(max(5vw, 22px), 40px);
+/*			background-color: #244173;*/
+			border-radius: 5px;
+			padding: 5px 0;
+			margin: 0 0 20px;
+		}
+		#answer1,#answer2,#answer3{
+			color: #fff;
+			font-weight: 900;
+			font-size: min(max(3vw, 12px), 20px);
+			border-radius: 30px;
+			cursor: pointer;
+			background-color: #3D6BB9;
+		}
+
+		#a-box,#b-box,#c-box{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 0;
+		}
+		#a,#b,#c{
+			z-index: 1;
+			height: 2.7em;
+			margin-right: -.8em;	
+		}
+		#neednone{
+			color: #fff;
+			margin-top:-20px;
+			font-size: min(max(3vw, 12px), 18px);
+			cursor: pointer;
+		}
+		#next_q{
+			color: #fff;
+			font-size: min(max(3vw, 12px), 18px);
+		}
+		
+		
+		
+		
+		.box1{
+			padding: 80px 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.box1:before{
+			content: '';
+			flex-grow: .5;
+		}
+		audio
+		{
+			-webkit-transition:all 0.5s linear;
+			-moz-transition:all 0.5s linear;
+			-o-transition:all 0.5s linear;
+			transition:all 0.5s linear;
+			-moz-box-shadow: 2px 2px 4px 0px #D5BC79;
+			-webkit-box-shadow:  2px 2px 4px 0px #D5BC79;
+			box-shadow: 2px 2px 4px 0px #D5BC79;
+			-moz-border-radius:7px 7px 7px 7px ;
+			-webkit-border-radius:30px ;
+			border-radius:30px ;
+		}
+
+		audio:hover, audio:focus, audio:active
+		{
+			-webkit-box-shadow: 8px 18x 10px rgba(77,59,20,0.4);
+			-moz-box-shadow: 8px 8px 10px rgba(77,59,20,0.4);
+			box-shadow: 8px 8px 10px rgba(77,59,20,0.4);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			transform: scale(1.05);
+		}
+		
+		#foot{
+
+		width: 100%;
+
+		display: inline-block;
+
+		background-color: #FFFFFF;
+
+		padding: 20px;
+			
+		text-align: center;
+
+	}
+
+    </style>
+  </head>
+  <body>
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark">
+        <a href="http://203.71.210.16/~npmpoetry/index.html"><img src="img/title.png" height="40vmin" alt=""/></a>
+        <a id="ins" href="https://www.instagram.com/npm_poetry/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a id="fb" href="https://www.facebook.com/npmpoetry/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>	
+	</nav>
+    
+ 
+	  <img id="no2" src="https://theme.npm.edu.tw/exh104/giuseppecastiglione/common/images/deco_2.png" alt="">
+
+	  <img id="no4" src="https://theme.npm.edu.tw/exh104/giuseppecastiglione/common/images/deco_6.png" alt="">
+	  
+	  <div class="container-fluid min-vh-100 d-flex justify-content-center" id="section_title">
+		<div class="row w-100 flex-row-reverse justify-content-center align-items-center">
+			
+			<a href="#introduce">
+				<div id="title_text" class="col-lg-12 col-12 d-flex flex-column justify-content-center align-items-start">
+					<img id="title_img" src="img/red circle.png" alt="">
+					
+					<div class="word-1">
+					  <span>驚</span>
+					  <span>煌</span>
+					  <span>詩</span>
+					  <span>色</span>
+					</div>
+	
+					
+	
+				</div>
+			</a>
+		</div>
+	  </div>
+	  
+     <section id="introduce">
+      <div class="introduce_con container h-100 min-vh-100 h-100 pb-5 pt-5">
+		    <div class="row">
+				  <div class="pic col-lg-6 col-12"> <a href="artdetail1.html"><img id="art" src="img/art1.png" width="90%" alt=""></a>
+				  </div>
+				  <div id="introduce_text" class="col-lg-6 col-12">
+					  <h1>【畫錦春圖】</h1>
+					  <p class="mymark"><span>作者:郎世寧</span><br><span>朝代: 清</span></p>
+					  <audio controls preload="metadata" width="50px">
+						   <source src="record/art1.mp3" type="audio/mpeg">
+					  </audio>
+					  <div>
+					   <p class="text">紅腹錦雞又叫金雞，古代被視為珍禽，是祥瑞之鳥，充滿富貴華麗的意象，也暗喻前程似錦。雞和「吉」諧音，有大吉大利的意義。畫中一對紅腹錦雞棲息在溪水邊山坡的湖石上，旁邊海棠花正盛開。頭頂金冠，脖子澄黃，背部金綠，腹部朱紅，全身光澤艷麗的的這隻是公的，全長有一公尺；蜷縮在旁，羽毛褐色淡雅的是母的。背景海棠繁花似錦，海棠一向有花中神仙、花貴妃之稱，正與紅腹錦雞的貴氣相映成趣。雌雞下方的石頭邊畫有幾朵小小的靈芝，則有延年益壽、長生不老的象徵意義。
+					   </p>
+					   <p class="text">這幅圖畫構圖繁複，設色講究，濃豔飽滿，追求明暗變化，畫錦雞用的是西方畫法，湖石坡草則表現了國畫的筆墨趣味，充分體現郎世寧的繪畫特色。
+					   </p>
+				 	  </div>
+				  </div>
+		    </div> 
+      </div>
+		 
+		<div class="introduce_con container h-100 min-vh-100 h-100 pb-5 pt-5">
+		    <div class="row">
+				  <div class="pic col-lg-6 col-12"> <a href="artdetail2.html"><img id="art2" src="img/art2.png" width="90%" alt=""></a>
+				  </div>
+			  <div  class="col-lg-6 col-12">
+					  <h1>【畫孔雀開屏】</h1>
+					  <p class="mymark"><span>作者:郎世寧</span><br><span>朝代: 清</span></p>
+					  <audio controls preload="metadata" width="50px">
+						   <source src="record/art2.mp3" type="audio/mpeg">
+					  </audio>
+					  <div>
+					   <p class="text">乾隆二十三年（1758年）六月，西域哈密進貢孔雀，乾隆特地寫了〈孔雀開屏〉詩，同年七月，郎世寧奉旨畫完成這一幅畫，並由方琮、金廷標補上背景。乾隆的御製詩也寫在畫上。這幅畫可以說是中西「合筆畫」的上乘之作。畫中兩隻孔雀在繁花似錦的皇家庭院中嬉戲，一隻展開橢圓尾屏，有金翠、藍綠、紫褐多彩，好似吸引另一隻回首對看。雄雀的尾巴三年尚小，但五年可以長到二、三尺，平時收攏在身後，開屏時金彩煥目。皇家庭院搭配青綠湖石造景，四周種有玉蘭、牡丹、海棠、月季、鳶尾、野菊各種花木，色彩鮮豔豐富，構成一幅生趣盎然的圖畫，結合孔雀，有「玉堂富貴」的寓意。郎世寧運用寫實技法，以鮮豔的色彩，加上西方光影透視的效果，呈現尾翼細膩複雜的華麗面貌，給人燦爛奪目的感覺。
+					   </p>
+					   <p class="text">在古代，孔雀被視為才氣與優美的體現，傳說是「鳳凰」的化身，象徵著擁有權力、美麗和智慧的女子，牡丹被譽為花中之王，雍容華貴，是富貴、美滿的象徵。此幅畫孔雀與牡丹並存，象徵著美好的祝福。
+					   </p>
+				 	  </div>
+				  </div>
+		    </div> 
+      </div>
+		 
+		 
+		<div class="introduce_con container h-100 min-vh-100 h-100 pb-5 pt-5">
+		    <div class="row">
+				  <div class="pic col-lg-6 col-12"> <a href="artdetail3.html"><img id="art3" src="img/art3.png" width="90%" alt=""></a>
+				  </div>
+			  <div  class="col-lg-6 col-12">
+					  <h1>【畫交阯果然】</h1>
+					  <p class="mymark"><span>作者:郎世寧</span><br><span>朝代: 清</span></p>
+					  <audio controls preload="metadata" width="50px">
+						   <source src="record/art3.mp3" type="audio/mpeg">
+					  </audio>
+					  <div>
+					   <p class="text">交阯即安南（今越南），是清廷的屬國，乾隆二十六年進納貢品，畫中的環尾狐猴就是安南國王進貢的方物。「果然獸」就是現在生長於馬達加斯加乾燥森林中的一種猴子，嘴唇長長的，眼睛像是狐狸，尾巴環節斑紋是最大特徵，因此叫「環尾狐猴」。畫上有乾隆皇帝御題的「交阯果然詩」，此年適逢乾隆母親七十大壽，正好用來為崇慶皇太后祝壽用。
+					   </p>
+					   <p class="text">畫中環尾狐猴攀爬在樹上，似要往上爬，卻又有什麼疑惑似的，顧盼不前。樹上開滿了粉紅色的桃花，還結有七顆碩大的蟠桃，「猴桃瑞壽」的意義非常明確。狐猴面白，琥珀色的眼睛和大大的黑眼圈，身體灰黑色，長長的尾巴黑白環繞相間，尾巴上的黑白環也剛好七圈。七顆蟠桃、七圈黑白環，為太后七十大壽相為呼應。郎世寧透過色彩由淡及深及濃的變化，將結構的立體感和皮毛的蓬鬆質感表現的淋漓盡致。
+					   </p>
+				 	  </div>
+				  </div>
+		    </div> 
+      </div>
+		 
+		 
+		<div class="introduce_con container h-100 min-vh-100 h-100 pb-5 pt-5">
+		    <div class="row">
+				  <div class="pic col-lg-6 col-12"> <a href="artdetail4.html"><img id="art4" src="img/art4.png" width="90%" alt=""></a>
+				  </div>
+			  <div  class="col-lg-6 col-12">
+					  <h1>【畫白海青】</h1>
+					  <p class="mymark"><span>作者:郎世寧</span><br><span>朝代: 清</span></p>
+					  <audio controls preload="metadata" width="50px">
+						   <source src="record/art4.mp3" type="audio/mpeg">
+					  </audio>
+					  <div>
+					   <p class="text">乾隆征服準葛爾部，平定新疆後，二十九年（1764年），新疆回部霍罕汗額爾德尼進貢白海青。郎世寧奉命繪圖，乾隆皇帝作有〈白海青歌〉，作為紀實，並寫御題詩在畫上。白海青，又叫海東青，被蒙古族視為飛的最快最高的鳥，譽為「萬鷹之神」，代表勇敢、智慧、進取、永不放棄的精神。傳說十萬隻神鷹只有一隻是純白色的，最為名貴，夾雜其他毛色的次之。乾隆〈白海青歌〉形容此白鷹「雙睛火齊懸為珠，一身梨花飛作雪」，可見此鷹為「金眸玉爪」的最上品，彌足珍貴。
+					   </p>
+					   <p class="text">畫中白鷹目光炯炯，桀驁不馴，利喙彎曲，腳爪鋒利緊緊抓住樹幹，振翅欲起。郎世寧以細膩寫實的筆法，處理羽毛質感與光澤。背景是老松樹，斑駁彎曲，圓形松針鋪陳於畫面，是方琮補繪。而松樹一向被譽為中國山水畫的「百樹之王」，其長青的特色，亦有挺拔孤高、永不放棄的精神，與「萬鷹之神」相映成趣。
+					   </p>
+				 	  </div>
+				  </div>
+		    </div> 
+      </div>
+		 
+		 
+		<div class="introduce_con container h-100 min-vh-100 h-100 pb-5 pt-5">
+		    <div class="row">
+				  <div class="pic col-lg-6 col-12"> <a href="artdetail5.html"><img id="art5" src="img/art5.png" width="90%" alt=""></a>
+				  </div>
+			  <div  class="col-lg-6 col-12">
+					  <h1>【畫瑞麅】</h1>
+					  <p class="mymark"><span>作者:郎世寧</span><br><span>朝代: 清</span></p>
+					  <audio controls preload="metadata" width="50px">
+						   <source src="record/art5.mp3" type="audio/mpeg">
+					  </audio>
+					  <div>
+					   <p class="text">繪畫中的動物看起來像是俗稱草泥馬的羊駝，是中國古代的瑞獸，叫做麅子，也稱麞麅，是鹿類，體型比梅花鹿小，耳朵和眼都大，脖子長，尾巴很短，後腳比前腳稍微長，性情非常溫馴。鹿與祿諧音，故被視為吉祥的象徵。東晉葛洪《抱朴子》曾記載:「鹿壽千歲，滿五百歲則色白」，畫中描繪全身雪白的麅子，古人相信，這樣的瑞獸出現，一定會帶來好運。
+					   </p>
+					   <p class="text">乾隆十六年（一七五一）秋天，乾隆皇帝到木蘭圍場參與狩獵大典時，蒙古族的必力滾達賴獻上這隻白麅給皇帝，毛色純白如雪，眼睛如丹砂，根本是稀世珍寶。皇帝非常開心。恰逢崇慶皇太后六十大壽，乾隆皇帝命郎世寧繪圖，當作送給太后的生日賀禮，皇上題詩在畫上，表達對慈母的孝心與誠心祝福。
+					   </p>
+                       <p class="text">圖中畫有地面湧泉和靈芝，湧泉象徵生生不息，靈芝則象徵長生不老。白麅毛皮以碎筆白線描繪無數疏密、粗細線條，並通過使用白色高光，來表現物象立體感。地面以淡青綠敷染，鹿足的淡墨輪廓外圍露出留白痕跡。白麅為郎世寧親筆，點景可能由另一位宮廷畫家姚文瀚補成。
+					   </p>      
+				 	  </div>
+				  </div>
+		    </div> 
+      </div>
+		 
+		<div class="introduce_con container h-100 min-vh-100 h-100 pb-5 pt-5">
+		    <div class="row">
+				  <div class="pic col-lg-6 col-12"> <a href="artdetail6.html"><img id="art6" src="img/art6.png" width="90%" alt=""></a>
+				  </div>
+			  <div  class="col-lg-6 col-12">
+					  <h1>【八駿圖】</h1>
+					  <p class="mymark"><span>作者:郎世寧</span><br><span>朝代: 清</span></p>
+					  <audio controls preload="metadata" width="50px">
+						   <source src="record/art6.mp3" type="audio/mpeg">
+					  </audio>
+					  <div>
+					   <p class="text">馬是遊牧民族重要的經濟生活來源，又是作戰交通必備的坐騎，純種與健壯的良駒深受滿洲貴族皇室的喜愛。郎世寧繪製〈八駿圖〉、〈十駿圖〉、〈百駿圖〉等非常有名，以馬為主題的的作品。自古良馬被比喻為有才能的人，郎世寧大量畫馬，可以說是象徵明君賞識和重用賢才。而〈八駿圖〉是六朝就開始流行的繪畫題材，典故出自〈穆天子傳〉中周穆王游崑崙山時所駕的八匹良馬，傳說牠們的名字分別為：驊騮、騄耳、赤驥、白羲、渠黃、逾輪、盜驪、山子。
+					   </p>
+					   <p class="text">一般的〈八駿圖〉都是奔騰靈動，但這幅畫並沒有描繪駿馬奔騰的景象，而是八匹駿馬在壯實粗大的柳樹下休息，風景秀麗，視野開闊。色彩不同的八匹馬有趴臥著有站立著，有兩匹正在嬉戲打鬥，也有像在覓食，自由舒閑，非常愜意。還有兩位圉人照顧馬匹，一位為馬匹梳理毛髮，一位則正在將鞍繩繫在樹幹上。有研究的後人猜測，畫中有一匹精瘦的馬兒，可能正比擬郎世寧本人異鄉遊子之情，不過沒有相關證據可以指實。
+					   </p>
+                       <p class="text">郎世寧使用西洋畫明暗聚焦以及透視的畫法，將馬匹的神態描述的栩栩如生，並運用西方寫實的畫法，用筆細膩，側重於表現駿馬的毛髮骨肉，立體感十分強烈。但在柳葉、樹皮、草葉等的墨線勾勒，石塊土坡的皴擦等仍含有中國傳統手法。全幅色彩濃麗，構圖繁複，形象逼真，顯示中西趣味兼容並蓄的畫面。
+					   </p>
+				 	  </div>
+				  </div>
+		    </div> 
+      </div> 
+		 
+		 
+		 
+		 
+    </section>
+	  
+
+	  
+	<div id="foot">
+
+		<img src="https://www.npm.gov.tw/images/logo.svg" alt="" height="35">
+
+		
+
+	</div>  
+
+	  
+	  
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+	  
+	  
+	  
+	<script>
+      //手動調整標題大小
+	  var word1 = document.getElementsByClassName("word-1");
+	  var titleSapn = word1[0].getElementsByTagName("span");
+      var word2 = document.getElementsByClassName("word-2");
+      var minorTitleSpan = word2[0].getElementsByTagName("span");
+	  var clientWidth = document.body.clientWidth;
+	  if(clientWidth < 500){
+		   console.log("clientWidth" + clientWidth);
+		  for(var i = 0; i < titleSapn.length; i++){
+			  titleSapn[i].style.fontSize = "8vw"; 
+		  };
+          for(i = 0; i < minorTitleSpan.length; i++){
+              minorTitleSpan[i].style.fontSize = "4vw";
+          };
+	  };
+	  if(clientWidth > 500){
+		  for(var i = 0; i < titleSapn.length; i++){
+			  titleSapn[i].style.fontSize = "4vw"; 
+		  };
+          for(i = 0; i < minorTitleSpan.length; i++){
+              minorTitleSpan[i].style.fontSize = "1.5vw";
+          };
+	  };
+		
+	  
+		
+	  </script>
+  </body>
+</html>

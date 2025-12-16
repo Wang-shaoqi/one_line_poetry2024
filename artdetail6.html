@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>驚煌詩色</title>
+	<link href="favicon.ico" rel="shortcut icon" />
+    <link href="favicon.ico" rel="bookmark" />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	  
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	  
+	  
+    <style type="text/css">
+		body{
+			background:linear-gradient(180deg,#FFFDE1 40%,#D5BC79);
+		}
+		
+		#nav{background-color: #203F6F;}
+		#fb,
+		#ins{
+			color: #fff; 
+			font-size: 25pt;
+			position: absolute;
+			cursor: pointer;
+			text-decoration: none;
+		}
+		
+		#fb{
+			right: 80px;
+		}
+		#ins{
+			right: 30px;
+		}
+
+
+		#introduce .introduce_con{
+			margin:auto;
+			display:flex;
+			align-items: center;
+			border-bottom: 1.2px solid rgba(150,150,100,.5);
+		}
+		#art{
+			border: 10px solid #fff;
+			box-shadow: 0 0 10px #C5C3AE;
+		}
+		.mymark{
+			border-left: 2px solid #6A2E0A;
+			padding-left: 14px;
+			font-size: 110%;
+			color: #6A2E0A;
+			font-weight: 600;
+		}
+		#introduce_text h1{
+			color: #244173; 
+			font-weight: 600;
+			margin: 20px 0;
+		}
+		.text{
+			color: #4A3513; 
+			font-weight: 500;
+			font-size: 1.3em;
+			text-shadow: 0 0 7px #ffffff;
+			text-indent: 2em;
+		}
+		.pic{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.head_title{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		
+		
+		
+		
+		.box{
+			box-sizing: border-box;
+			background-color: #fff;
+			width:100%;
+			height: 85vh;
+			min-height: 500px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		
+		
+		
+		#q_text{
+			border: 5px solid #D6BE7D;
+			background-color: #244173;
+			width: 85%;
+			height: 70vh;
+			min-height: 400px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.question_title a{text-decoration: none;}
+		#question_answer{
+			margin-top: 10px;
+			display:none;
+/*			display: none;透明度跟margin-bottom要改掉*/
+			margin-bottom: -7vh;
+		}
+		.question_title h1{
+			color: #fff;
+			font-weight: 700;
+			font-size: min(max(5vw, 22px), 40px);
+/*			background-color: #244173;*/
+			border-radius: 5px;
+			padding: 5px 0;
+			margin: 0 0 20px;
+		}
+		#answer1,#answer2,#answer3{
+			color: #fff;
+			font-weight: 900;
+			font-size: min(max(3vw, 12px), 20px);
+			border-radius: 0px 30px 30px 0px;
+			cursor: pointer;
+			background-color: #3D6BB9;
+		}
+
+		#a-box,#b-box,#c-box{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 0;
+		}
+		#a,#b,#c{
+			z-index: 1;
+			height: 2.7em;
+			margin-right: -.7em;	
+		}
+		#neednone{
+			color: #fff;
+			margin-top:-20px;
+			font-size: min(max(3vw, 12px), 18px);
+			cursor: pointer;
+		}
+		#next_q{
+			color: #fff;
+			font-size: min(max(3vw, 12px), 18px);
+		}
+		
+		
+		
+		
+		
+		.box1{
+			padding: 80px 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.box1:before{
+			content: '';
+			flex-grow: .5;
+		}
+		
+		audio:hover, audio:focus, audio:active
+		{
+			-webkit-box-shadow: 8px 18x 10px rgba(77,59,20,0.4);
+			-moz-box-shadow: 8px 8px 10px rgba(77,59,20,0.4);
+			box-shadow: 8px 8px 10px rgba(77,59,20,0.4);
+			-webkit-transform: scale(1.05);
+			-moz-transform: scale(1.05);
+			transform: scale(1.05);
+		}
+		audio
+		{
+			-webkit-transition:all 0.5s linear;
+			-moz-transition:all 0.5s linear;
+			-o-transition:all 0.5s linear;
+			transition:all 0.5s linear;
+			-moz-box-shadow: 2px 2px 4px 0px #D5BC79;
+			-webkit-box-shadow:  2px 2px 4px 0px #D5BC79;
+			box-shadow: 2px 2px 4px 0px #D5BC79;
+			-moz-border-radius:7px 7px 7px 7px ;
+			-webkit-border-radius:30px ;
+			border-radius:30px ;
+			margin-bottom: 1em;
+			margin-top: .5em;
+		}
+
+		
+		#information{margin: 130px 0 100px}
+		#big-img{
+			margin-bottom: 80px;
+		}
+		#big-img #intro_text h3{
+			font-weight: 600;
+			color: #6A2E0A;
+		}
+
+/*
+		#intro-h3{font-size: 2em;}
+		#intro-p{font-size: 1em;}
+*/
+		#small-img{
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			width: 100%;
+			margin:auto;
+		}
+		#small-img > div{display:inline-block;}
+		#small-img div{
+			
+		}
+		#information .slideshow{
+			width:10%;
+/*			max-width: 250px;*/
+			margin: 0 1.5vw;
+			box-shadow: 5px 5px 8px #D5BC79;
+			display:inline-block;
+			cursor: pointer;
+		}
+		#information .slideshow:hover{transform: scale(1.1);transition: .3s;}
+		.information-cursor{cursor: pointer;}
+		
+		#lt,
+		#gt{
+			position: absolute;
+			transform: translate(0%,-50%);
+			font-size: 8vw;
+			font-weight: 700;
+			color: #6A2E0A;
+			top: 50%;
+		}
+		#lt{
+			left: 18%;
+		}
+		#gt{
+			right: 18%;
+		}
+		
+		#foot{
+
+		width: 100%;
+
+		display: inline-block;
+
+		background-color: #FFFFFF;
+
+		padding: 20px;
+			
+		text-align: center;
+
+	}
+    </style>
+  </head>
+  <body>
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark">
+        <a href="index.html"><img src="img/title.png" height="40vmin" alt=""/></a>
+        <a id="ins" href="https://www.instagram.com/npm_poetry/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a id="fb" href="https://www.facebook.com/npmpoetry/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>	
+	</nav>
+	  
+	    
+    <section id="introduce">
+      <div class="introduce_con container h-100 min-vh-100 h-100 pb-5 pt-5">
+		    <div class="row">
+				  <div class="pic col-lg-6 col-12">
+						<img id="art" src="img/art6.png" width="90%" alt="">
+				  </div>
+				  <div id="introduce_text" class="col-lg-6 col-12">
+					  <h1>【八駿圖】</h1>
+					  <p class="mymark"><span>作者:郎世寧</span><br><span>朝代: 清</span></p>
+					  <audio controls preload="metadata" width="50px">
+						   <source src="record/art6.mp3" type="audio/mpeg">
+					  </audio>
+					  <div>
+					   <p class="text">馬是遊牧民族重要的經濟生活來源，又是作戰交通必備的坐騎，純種與健壯的良駒深受滿洲貴族皇室的喜愛。郎世寧繪製〈八駿圖〉、〈十駿圖〉、〈百駿圖〉等非常有名，以馬為主題的的作品。自古良馬被比喻為有才能的人，郎世寧大量畫馬，可以說是象徵明君賞識和重用賢才。而〈八駿圖〉是六朝就開始流行的繪畫題材，典故出自〈穆天子傳〉中周穆王游崑崙山時所駕的八匹良馬，傳說牠們的名字分別為：驊騮、騄耳、赤驥、白羲、渠黃、逾輪、盜驪、山子。
+					   </p>
+					   <p class="text">一般的〈八駿圖〉都是奔騰靈動，但這幅畫並沒有描繪駿馬奔騰的景象，而是八匹駿馬在壯實粗大的柳樹下休息，風景秀麗，視野開闊。色彩不同的八匹馬有趴臥著有站立著，有兩匹正在嬉戲打鬥，也有像在覓食，自由舒閑，非常愜意。還有兩位圉人照顧馬匹，一位為馬匹梳理毛髮，一位則正在將鞍繩繫在樹幹上。有研究的後人猜測，畫中有一匹精瘦的馬兒，可能正比擬郎世寧本人異鄉遊子之情，不過沒有相關證據可以指實。
+					   </p>
+                       <p class="text">郎世寧使用西洋畫明暗聚焦以及透視的畫法，將馬匹的神態描述的栩栩如生，並運用西方寫實的畫法，用筆細膩，側重於表現駿馬的毛髮骨肉，立體感十分強烈。但在柳葉、樹皮、草葉等的墨線勾勒，石塊土坡的皴擦等仍含有中國傳統手法。全幅色彩濃麗，構圖繁複，形象逼真，顯示中西趣味兼容並蓄的畫面。
+					   </p>
+				 	  </div>
+				  </div>
+		    </div> 
+      </div>
+    </section>
+	  
+	<section id="information">
+		<div class="container">
+			<div id="big-img" class="row">
+				<div class="col-12">
+					<div class="pic">
+						<img id="information-main-img" src="img/6-1.png" alt="" width="30%" max-width="450px">
+					</div>
+					<div id="intro_text" class="text-center mt-5">
+						<h3 id="intro-h3" class="mb-2">精瘦的馬兒</h3>
+						<p id="intro-p">有研究的後人猜測，畫中有一匹精瘦的馬兒，可能正比擬郎世寧本人。</p>
+					</div>
+				</div>
+			</div>
+			<div id="small-img">
+				<span id="lt">&lt;</span><span id="gt">&gt;</span>
+					<img id="information-img-1" class="slideshow" src="img/6-1s.png" alt="">
+					<img id="information-img-2" class="slideshow" src="img/6-2s.png" alt="">
+					<img id="information-img-3" class="slideshow" src="img/6-3s.png" alt="">
+			</div>
+		</div>  
+	</section>
+	  
+	  
+	<section id="question" class="box1">
+      <div class="container">
+        <div class="row">
+			  <div class="box">
+			  	<div class="text-center" id="q_text">
+					<div class="col-12 question_title" id="question_title">
+					  <h1 class="col-12 title" id="start_btn">機智問答大挑戰</h1>
+					  <span id="next_q"></span><p id="neednone">《點我開始遊戲》</p>
+					  <div class="flex-wrap justify-content-center" id="question_answer">
+						  <div id="a-box" class="col-md-4 col-8 mb-2">
+							   <img id="a" src="img/A.png" alt="">
+							   <div id="answer1" class="col-10">柳樹下</div>
+						  </div>
+						  <div id="b-box" class="col-md-4 col-8 mb-2">
+							   <img id="b" src="img/B.png" alt="">
+							   <div id="answer2" class="col-10">湖石上</div>
+						  </div>
+						  <div id="c-box" class="col-md-4 col-8 mb-2">
+							   <img id="c" src="img/C.png" alt="">
+							   <div id="answer3" class="col-10">老松樹上</div>
+						  </div>
+					  </div>
+					</div>
+				</div>
+			  </div>
+        </div>
+      </div>
+    </section>
+	
+	    
+	<div id="foot">
+
+		<img src="https://www.npm.gov.tw/images/logo.svg" alt="" height="35">
+
+		
+
+	</div>  
+
+	 
+	  
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+	  
+	  
+	  
+	<script> 	
+	  //手動調箭頭大小
+	  var mylt = document.getElementById("lt");
+	  var mygt = document.getElementById("gt");
+      var slideShow = document.getElementsByClassName("slideshow");
+      var inforMainImg = document.getElementById("information-main-img");
+	  var clientWidth = document.body.clientWidth;
+	  if(clientWidth < 800){
+		  mylt.style.fontSize = "10vw";
+		  mygt.style.fontSize = "10vw";
+          for(var i = 0; i < slideShow.length; i++){
+              slideShow[i].style.width = "15%";
+              mylt.style.left = "12%";
+              mygt.style.right = "12%";
+              inforMainImg.style.width =　"45%";
+          };
+	  };
+	  if(clientWidth > 1300 && clientWidth < 1700){
+		  mylt.style.fontSize = "6vw";
+		  mygt.style.fontSize = "6vw";
+	  };
+	  if(clientWidth >=  1700 && clientWidth < 3000){
+		  mylt.style.fontSize = "3vw";
+		  mygt.style.fontSize = "3vw";
+	  };
+	  if(clientWidth >=  3000){
+		  mylt.style.fontSize = "1vw";
+		  mygt.style.fontSize = "1vw";
+	  };
+	 
+		console.log(clientWidth);
+		
+		 //縮圖置換
+	  var infor_main_img = document.getElementById("information-main-img");
+	  var infor_img1 = document.getElementById("information-img-1");
+      var infor_img2 = document.getElementById("information-img-2");
+      var infor_img3 = document.getElementById("information-img-3");
+	  var intro_h3 = document.getElementById("intro-h3");
+	  var intro_p = document.getElementById("intro-p");
+		
+	  infor_img1.addEventListener("click",chImg1);
+		function chImg1(){
+			infor_main_img.src = "img/6-1.png";	
+			intro_h3.innerHTML = "精瘦的馬兒";
+			intro_p.innerHTML = "有研究的後人猜測，畫中有一匹精瘦的馬兒，可能正比擬郎世寧本人。";
+		};
+		infor_img2.addEventListener("click",chImg2);
+		function chImg2(){
+			infor_main_img.src = "img/6-2.png";	
+			intro_h3.innerHTML = "柳樹";
+			intro_p.innerHTML = "壯實粗大的柳樹、柳葉等的墨線勾勒，仍含有中國傳統手法。";
+		};
+		infor_img3.addEventListener("click",chImg3);
+		function chImg3(){
+			infor_main_img.src = "img/6-3.png";	
+			intro_h3.innerHTML = "圉人與黑馬";
+			intro_p.innerHTML = "一位圉人則正在將鞍繩繫在樹幹上，為何八駿之中，只有這匹需要將韁繩繫在樹上，很有可能是因為黑色的「盜驪」如史書上所載脾氣暴烈，極難馴服所致。";
+		};
+		
+		
+		
+		
+	  var startCount = false; console.log(startCount);
+	  var choseCount = 0;
+	  var nextCount = 1;
+	  var startBtn = document.getElementById("start_btn");//第一句需要全部替換(為了也替換掉id startbtn)
+	  var needDone = document.getElementById("neednone");
+	  needDone.addEventListener("click",start);
+	  function start(){
+		  //把第一句全換掉
+		  //把neednone  p的提醒變成空字串 outerHTML
+		  //把定位取消掉
+		  if(startCount === false){
+			  startBtn.innerHTML = 'Q1.請問畫中動物所在的地方為何?';
+			  document.getElementById("neednone").outerHTML = '';
+			  var question_answer = document.getElementById("question_answer");
+			  question_answer.style.display = "flex";
+			  question_answer.style.marginBottom = 0;
+			  startBtn.style.cursor = "auto";
+			  choseCount++;
+			  startCount = true;
+//			  console.log("choseCount" + choseCount);
+//			  console.log("startCount" + startCount);
+//			  console.log("nextCount" + nextCount);
+		  };
+		  
+	  };
+		
+		
+	  //各個選項點到後
+	  var answer1 = document.getElementById("answer1"); 
+	  answer1.addEventListener("click",ans1);
+	  function ans1(){
+		  switch(choseCount){
+			  case 1:
+				  clickChoseRight(1);
+				  break;
+			  case 2:
+				  gamedone();
+		  		  startBtn.innerHTML = "答錯囉~是駿馬<br>問答結束<br>接下來讓我們創作屬於你的一行詩!";
+				  break;
+		  };
+	  };
+		
+      var answer2 = document.getElementById("answer2"); 
+	  answer2.addEventListener("click",ans2);
+	  function ans2(){
+		  switch(choseCount){
+			  case 1:
+				  clickChoseWron(1);
+				  break;
+			  case 2:
+				  gamedone();
+		  		  startBtn.innerHTML = "答錯囉~是駿馬<br>問答結束<br>接下來讓我們創作屬於你的一行詩!";
+				  break;
+		  };
+	  };
+	  
+	  var answer3 = document.getElementById("answer3"); 
+	  answer3.addEventListener("click",ans3);
+	  function ans3(){
+		  switch(choseCount){
+			  case 1:
+				  clickChoseWron(1);
+				  break;
+			  case 2:
+				  gamedone();
+		  		  startBtn.innerHTML = "恭喜答對~<br>問答結束<br>接下來讓我們創作屬於你的一行詩!";
+				  break;
+		  };
+	  };
+		
+		
+	  //回覆問題總結	
+	  function clickChoseWron(whichNum){
+		  vanishChose();
+		  wronReply(whichNum-1);
+		  choseCount++;
+//		  console.log("choseCount" + choseCount);
+	  };
+	  function clickChoseRight(whichNum){
+		  vanishChose();
+		  rightReply(whichNum-1);
+		  choseCount++;
+//		  console.log("choseCount" + choseCount);
+	  };	
+		
+		
+		
+		
+	  var nextQ = document.getElementById("next_q");
+	  //點到下一題(next_q  的span)後 換成下一題
+	  nextQ.addEventListener("click",chQ);
+	  function chQ(){
+		  switch(nextCount){
+			  case 1:
+			  //把標題改成第二題
+			  //把下一題隱藏
+			  //把answer1~3裡的選項改掉 並 顯示回來
+			  	  chQwrap(2);
+				  break;
+			  case 2:
+				  chQwrap(3);
+				  break;
+				  
+		  };
+	  };
+	  
+	  //問問題總結
+	  function chQwrap(whichNum){
+		  changeQTitle(whichNum-1);
+		  changeChose(whichNum-1);
+		  showChose();
+		  nextCount++;
+//		  console.log("nextCount" + nextCount);
+	  };
+	  //五題測驗結束(nextCount是5)
+	  function gamedone(){
+		  vanishChose();
+		  nextQ.innerHTML = '<a href="poetry/poetry6.html" style="text-decoration:none;color:#fff;">《點我前往創作》</a>';
+		  nextQ.style.cursor = "pointer";
+	  };
+		
+		
+		
+		
+	  //其他函式
+	  //把選項弄消失  opacity: 0透明度跟margin-bottom要改掉margin-bottom: -8vh;
+			
+	  function vanishChose(){
+		  question_answer.style.display = "none";
+		  question_answer.style.marginBottom = "-4vh";
+		  answer1.style.cursor = "auto";
+		  answer2.style.cursor = "auto";
+		  answer3.style.cursor = "auto";
+	  };
+
+	  //把選項弄回來
+	  function showChose(){
+		  question_answer.style.display = "flex";
+		  question_answer.style.marginBottom = 0;
+		  answer1.style.cursor = "pointer";
+		  answer2.style.cursor = "pointer";
+		  answer3.style.cursor = "pointer";
+	  }
+	  //改選項內容
+	  //第幾題 題目 ABC的答案
+	  var myarray = [
+		  {num: 1, title: "Q1.請問畫中的動物所在的地方為何?", answerA: "柳樹下", answerB: "湖石上", answerC: "老松樹上", wronReply: "答錯囉~是柳樹下", rightReply: "恭喜答對!往下一題邁進吧"},
+		  {num: 2, title: "Q2.請問畫中的動物名字為何?", answerA: "紅腹錦雞", answerB: "錦鯉", answerC: "駿馬", wronReply: "答錯囉~是駿馬", rightReply: "恭喜答對!往下一題邁進吧"}
+	  ];
+		
+	  var myanswer1 = document.getElementById("answer1");
+	  var myanswer2 = document.getElementById("answer2");
+      var myanswer3 = document.getElementById("answer3");
+	  function changeChose(whichNum){
+		  myanswer1.innerHTML = myarray[whichNum].answerA;
+		  myanswer2.innerHTML = myarray[whichNum].answerB;
+		  myanswer3.innerHTML = myarray[whichNum].answerC;
+	  };
+	  
+		
+	  //改標題(新題目的標題) 跟 讓下一題不見
+	  function changeQTitle(whichNum){
+		 startBtn.innerHTML = myarray[whichNum].title;
+		 nextQ.innerHTML = "";
+		 nextQ.style.cursor = "auto";
+	  };
+		
+		
+	  //改標題(回答後的回應 錯和對) 跟 讓下一題出現
+	  function wronReply(whichNum){
+		 startBtn.innerHTML = myarray[whichNum].wronReply;
+		 nextQ.innerHTML = "《下一題》";
+		 nextQ.style.cursor = "pointer";
+	  };
+	  function rightReply(whichNum){
+		 startBtn.innerHTML = myarray[whichNum].rightReply;
+		 nextQ.innerHTML = "《下一題》";
+		 nextQ.style.cursor = "pointer";
+	  };
+	  </script>
+	  
+	  
+	  
+  </body>
+</html>
