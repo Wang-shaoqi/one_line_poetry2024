@@ -1,0 +1,2095 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>驚煌詩色</title>
+<link href="favicon.ico" rel="shortcut icon" />
+ <link href="favicon.ico" rel="bookmark" />
+	<!-- Bootstrap -->
+
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+	  
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+
+	
+
+/*	html,*/
+
+		
+
+	body {
+
+		text-align: center;
+
+		font-weight: 500;
+
+		background: linear-gradient(180deg,#FFFDE1 20%,#D5BC79);
+
+	}
+
+			
+
+	h1{
+
+		text-align: center;
+
+		color: #203F6F;
+
+		text-shadow: 0 0 0.2em #fffde1, 0 0 0.2em #fffde1, 0 0 0.2em #fffde1;
+
+		font-weight: bolder;
+
+	}
+
+			
+
+	h2{
+
+		color: #FFFFFF;
+
+		font-weight: 600;
+
+		width: 100%;
+
+	}
+
+	
+
+	p{
+
+		margin-bottom: 0;
+
+	}
+
+	
+
+	.six{
+
+		margin-top: -20px;
+
+		margin-bottom: 30px;
+
+	}
+
+	
+
+	input{
+
+		margin: 2px;
+
+		background-color: rgba(255,255,255,0.7);
+
+		border-radius: 3px;
+
+		text-align: center;
+
+		width: 100%;
+
+	}
+
+	
+
+	button{
+
+		border-radius: 3px;
+
+		text-align: center;
+
+		margin-top: 20px;
+
+	}
+
+	
+
+	.container {
+
+	}
+
+	
+
+	.outputcontainer{
+
+	    margin: 20px auto 0;
+
+		max-width: 600px;
+
+		word-wrap:break-word;
+
+	}
+
+	
+
+	* {
+
+		box-sizing: border-box;
+
+	}
+
+	
+
+	ul {
+
+		margin: 0;
+
+		padding: 0;
+
+	}
+
+	
+
+	li.drag-sort-active {
+
+		background: transparent;
+
+		color: transparent;
+
+		border: 1px solid #4ca1af;
+
+	}
+
+	
+
+	span.drag-sort-active {
+
+		background: transparent;
+
+		color: transparent;
+
+	}
+
+		
+
+	#outputbox{
+
+		box-sizing: border-box;
+
+		width: 300px;
+
+		height: 350px;
+
+		border: #FFFFFF solid 10px;
+
+		box-shadow: 2px 2px 5px #4D4D4D;
+
+	}
+
+	
+
+	#imgbox{
+
+		position: absolute;
+
+	}
+
+	
+
+	.enter{
+
+		font-size: 12px;
+
+		color: #383838;
+
+		margin-top: 5px;
+
+		text-shadow: 0 0 0.2em #fffde1, 0 0 0.2em #fffde1, 0 0 0.2em #fffde1;
+
+	}
+
+	
+
+	.move{
+
+		font-size: 15px;
+
+		color: #383838;
+
+		margin-top: -20px;
+
+		margin-bottom: 15px;
+
+		text-shadow: 0 0 0.2em #fffde1, 0 0 0.2em #fffde1, 0 0 0.2em #fffde1;
+
+	}
+
+	
+
+	.list{
+
+		margin: 30px 5px 5px;
+
+		padding: 0 20px;
+
+		height: 40px;
+
+		line-height: 40px;
+
+		border-radius: 3px;
+
+		background: #203F6F;
+
+		background-image: background: -webkit-linear-gradient(left, #267871, #203F6F);
+
+		background-image: background: -o-linear-gradient(left, #267871, #203F6F);
+
+		background-image: background: linear-gradient(to right, #267871, #203F6F);
+
+		background-image: background: -webkit-linear-gradient(left, #267871, #203F6F);
+
+		background-image: background: -o-linear-gradient(left, #267871, #203F6F);
+
+		background-image: background: linear-gradient(to right, #267871, #203F6F);
+
+		color: #fff;
+
+		list-style: none;
+
+		display: inline-block;
+
+		text-align: center;
+
+		width: min(max(50vw, 200px), 220px);
+
+	}
+
+	
+
+	#list{
+
+		max-width: 1800px;
+
+	}
+
+	
+
+	#list0,#list1,#list2,#list3{
+
+		margin-top: 0px;
+
+		margin-bottom: 15px;
+
+	}
+
+	
+
+	.box{
+
+		height: 100vh;
+
+		display: flex;
+
+		flex-direction: column;
+
+  		align-items: center;
+
+		}
+
+	
+
+	.box:before{
+
+ 		content: '';
+
+  		flex-grow: .5;
+
+	}
+
+	
+
+	.content{
+
+  		width: 400px;
+
+  		background: #ccc;
+
+	}
+
+	
+
+	.result{
+
+		display: inline-block;
+
+		margin: 0px 30px;
+
+	}
+
+	
+
+	#result{
+
+		width: 100%;
+
+		text-align: center;
+
+	}
+
+	
+
+	#result1,#result2,#result3,#result4{
+
+		width: 230px;
+
+	}
+
+	
+
+	#name1,#name2,#name3,#name4,#name5{
+
+		width: 170px;
+
+	}
+
+	
+
+	#btn1{
+
+		margin: 5px;
+
+	}
+
+	
+
+	.theme{
+
+		margin-top: 10px;
+
+		margin-bottom: 5px;
+
+		width: 100%;
+
+		text-shadow: 0 0 0.2em #fffde1, 0 0 0.2em #fffde1, 0 0 0.2em #fffde1;
+
+	}
+
+	
+
+	.row{
+
+		background-size: 60%;
+
+		background-repeat:no-repeat;
+
+		background-attachment:fixed;
+
+		background-position:center;
+
+		justify-content: space-evenly;
+
+		align-items: center;
+
+	}
+
+	
+
+	.photo{
+
+		display: inline-block;
+
+		border: #FFFFFF solid 10px;
+
+		box-shadow: 2px 2px 5px #4D4D4D;
+
+	}
+
+	
+
+	#title{
+
+		font-weight: bold;
+
+		color: #FFFFFF;
+
+		writing-mode: vertical-rl;
+
+		z-index: 999;
+
+		position: relative;
+
+		left: 200px;
+
+		bottom: 20px;
+
+		height: 180px;
+
+	}
+
+	
+
+	#poetry{
+
+		color: #FFFFFF;
+
+		font-size: 18px;
+
+		writing-mode: vertical-rl;
+
+		z-index: 998;
+
+		position: relative;
+
+		left: 175px;
+
+		bottom: 215px;
+
+		height: 400px;
+
+	}
+
+	
+
+	#signature{
+
+		color: #FFFFFF;
+
+		writing-mode: vertical-rl;
+
+		z-index: 997;
+
+		position: relative;
+
+		left: 175px;
+
+		bottom: 370px;
+
+		height: 100px;
+
+	}
+
+	
+
+	.space{
+
+		height: 20vh;
+
+	}
+
+	
+
+	#nav{
+
+		background-color: #203F6F;
+
+		display: flex;
+
+	}
+
+	
+
+	#no1{
+
+		position: absolute;
+
+		top: 100px;
+
+		left: 0;
+
+		z-index: -1;
+
+	}
+
+	
+
+	#no2{
+
+		position: absolute;
+
+		top: 250px;
+
+		right: 0;
+
+		z-index: -1;
+
+	}
+
+	
+
+	#no3{
+
+		position: absolute;
+
+		top: 900px;
+
+		left: 100px;
+
+		z-index: -1;
+
+		width: 60vw;
+
+	}
+
+	
+
+	#no4{
+
+		position: absolute;
+
+		bottom: -1500px;
+
+		left: 0;
+
+		z-index: -1;
+
+		width: 250px;
+
+	}
+
+	
+
+	#no5{
+
+		position: absolute;
+
+		bottom: -2150px;
+
+		right: 0;
+
+		z-index: -1;
+
+	}
+
+	
+
+	.foot{
+
+		height: 100%;
+
+		background-color: #203F6F;
+
+		color: #FFFFFF;
+
+		padding: 0px;
+
+	}
+
+	
+
+	.end{
+
+		margin: 0px 8px;
+
+		display: inline-block;
+
+		padding: 10px 0px;
+
+		word-break: break-all;
+
+		word-wrap: break-word;
+
+	}
+
+	
+
+	#foot{
+
+		width: 100%;
+
+		display: inline-block;
+
+		background-color: #FFFFFF;
+
+		padding: 20px;
+
+	}
+
+	
+
+	.space2{
+
+		height: 5vh;
+
+	}
+
+	
+
+	#wbox,#cbox{
+
+		position: relative;
+
+		width: 300px;
+
+		height: 485px;
+
+		background-color: #FFFFFF;
+
+		border-radius: 5px;
+
+		box-shadow: 2px 2px 5px #444444;
+
+		text-align: center;
+
+		display: inline-block;
+
+		margin: 30px 10px;
+
+	}
+
+	
+
+	#wimg,#cimg,#t1img,#t2img{
+
+		margin: 25px 0px 5px;
+
+		border-radius: 1000px;
+
+		box-shadow: 2px 2px 5px #444444;
+
+	}
+
+	
+
+	#wname,#cname{
+
+		font-weight: 600;
+
+		margin: 15px;
+
+		color: #000000;
+
+		text-shadow: 0 0 0 #FFFFFF;
+
+	}
+
+	
+
+	#t1box{
+
+		position: relative;
+
+		width: 300px;
+
+		height: 485px;
+
+		background-color: #FFFFFF;
+
+		border-radius: 5px;
+
+		box-shadow: 2px 2px 5px #444444;
+
+		text-align: center;
+
+		display: inline-block;
+
+		margin: 30px 10px;
+
+	}
+
+	
+
+	#t1name{
+
+		font-weight: 600;
+
+		margin: 15px 5px;
+
+		color: #000000;
+
+		text-shadow: 0 0 0 #FFFFFF;
+
+		display: inline-block;
+
+	}
+
+	
+
+	#t2box{
+
+		position: relative;
+
+		width: 300px;
+
+		height: 485px;
+
+		background-color: #FFFFFF;
+
+		border-radius: 5px;
+
+		box-shadow: 2px 2px 5px #444444;
+
+		text-align: center;
+
+		display: inline-block;
+
+		margin: 30px 10px;
+    
+
+	}
+
+	
+
+	#t2name{
+
+		font-weight: 600;
+
+		margin: 15px 5px;
+
+		color: #000000;
+
+		text-shadow: 0 0 0 #FFFFFF;
+
+		display: inline-block;
+
+	}
+
+	
+
+	.instruction{
+
+		margin: 5px;
+
+		display: inline-block;
+
+		color: #000000;
+    font-size: 11pt;
+
+	}
+
+	
+
+	.decorate{
+
+		display: inline-block;
+
+		padding: 0;
+
+		margin: 0px 5px;
+
+		width: 45px;
+
+		height: 20px;
+
+		line-height: 21px;
+
+		background-color: #D5BC79;
+
+		color: #FFFFFF;
+
+		font-weight: 600;
+
+	}
+
+	
+
+	.t{
+
+		display: inline-block;
+
+		margin: 0;
+
+	}
+
+	
+
+	#people{
+
+		width: 100%;
+
+		height: 100%;
+
+		background-color: #203F6F;
+
+		padding: 40px 20px 15px;
+
+	}
+
+	
+
+	#t_1_1{
+
+		padding-left: 55px;
+
+	}
+
+	
+
+	#t_1_2{
+
+		padding-left: 30px;
+
+	}
+
+	
+
+	#t_2_1{
+
+		padding-left: 55px;
+
+	}
+
+	
+
+	#t_2_2{
+
+		padding-left: 55px;
+
+	}
+
+	
+
+	.namecard{
+
+		display: inline-block;
+
+	}
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	#description{
+
+		background-color: #203F6F;
+
+		text-align: left;
+
+	}
+
+	
+
+	#description h1{
+
+		margin-bottom:1.5em;
+
+		box-shadow: none;
+
+	}
+
+	#description h2{
+
+		margin-bottom: 70px;
+
+	}
+
+	
+
+	#description img{
+
+		width: 85%;
+
+	}
+
+	
+
+	#description #logo{
+
+		border-radius: 50%;
+
+		border: 15px solid #fff;
+
+		padding: 15px;
+
+	}
+
+	
+
+	.biaozhi{
+
+		display: inline-block;
+
+		text-align: center;
+
+	}
+
+	
+
+	.lll{
+
+		font-size: 6vmin;
+
+	}
+
+	
+
+	.mmm{
+
+		font-size: 5vmin;
+
+	}
+
+	
+
+	.sss{
+
+		font-size: 2vmin;
+
+	}
+
+	
+
+	.qita{
+
+		font-size: 2.5vmin;
+
+	}
+
+	
+
+	.des{
+
+		text-align: center;
+
+	}
+
+	
+
+	.jeyian{
+
+		cursor: pointer;
+
+	}
+
+	
+
+		
+
+	#nav{background-color: #203F6F;}
+
+	
+
+	#fb,#ins{
+
+		color: #fff; 
+
+		font-size: 25pt;
+
+		position: absolute;
+
+	}
+
+	
+
+	#fb{
+
+		right: 80px;
+
+		cursor: pointer;
+
+	}
+
+	
+
+	#ins{
+
+		right: 30px;
+
+		cursor: pointer;
+
+	}
+
+	
+
+	#ai{
+
+		text-decoration:none;
+
+		margin-top: 6vh;
+
+		margin-bottom: 5vh;
+
+	}
+
+		#sortable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+  #sortable li { margin: 0 3px 3px 3px; border: 1px solid #4ca1af;	  display:inline-block;}
+
+</style>	
+
+	
+
+</head>
+
+	
+
+<body>
+
+	
+
+	<div id="page1">
+
+	<nav id="nav" class="navbar navbar-expand-lg navbar-dark">
+
+    <a class="keyian" href="../index.html"><img src="img/title.png" height="40vmin" alt=""/></a>
+
+	<a id="ins" href="https://www.instagram.com/npm_poetry/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+	<a  id="fb" href="https://www.facebook.com/npmpoetry/"><i class="fa fa-facebook" aria-hidden="true"></i></a>	
+
+	</nav>
+
+	</div>
+
+		
+
+	<img id="no1" src="https://theme.npm.edu.tw/exh104/giuseppecastiglione/common/images/deco_1.png" alt="">
+
+		
+
+	<img id="no2" src="https://theme.npm.edu.tw/exh104/giuseppecastiglione/common/images/deco_2.png" alt="">
+
+		
+
+	<img id="no3" src="https://theme.npm.edu.tw/exh104/giuseppecastiglione/common/images/deco_3.png" alt="">
+
+		
+
+	<img id="no4" src="https://theme.npm.edu.tw/exh104/giuseppecastiglione/common/images/deco_6.png" alt="">
+
+		
+
+	<img id="no5" src="https://theme.npm.edu.tw/exh104/giuseppecastiglione/common/images/deco_5.png" alt="">
+
+	
+
+<div class="container">
+
+	
+
+<div class="row">
+
+
+
+<div class="col-lg-4 col-md-12 col-12">
+
+
+
+<p class="space2"></p>
+
+	
+
+<div><img class="photo" src="img/art2.jpg" width="100%" alt=""/></div>
+
+	
+
+<p class="space2"></p>
+
+
+
+</div>
+
+	
+
+<div class="col-lg-2 col-md-4 col-8">
+
+
+
+<p class="theme">孔雀在做什麼呢？</p>
+
+	
+
+    <input type="text" id="text1_1" value="顧盼">
+
+	<input type="text" id="text1_2">
+
+    <input type="text" id="text1_3">
+
+	<input type="text" id="text1_4">
+
+	
+
+	<p class="enter">填寫動詞▲</p>
+
+ 
+
+</div>
+
+	
+
+<div class="col-lg-2 col-md-4 col-8">
+
+    
+
+	<p class="theme">這幅畫看起來如何呢？</p>
+
+	
+
+    <input type="text" id="text2_1" value="驚喜的">
+
+	<input type="text" id="text2_2">
+
+    <input type="text" id="text2_3">
+
+	<input type="text" id="text2_4">
+
+	
+
+	<p class="enter">填寫形容詞▲</p>
+
+ 	
+
+</div>
+
+	
+
+<div class="col-lg-2 col-md-4 col-8">
+
+    
+
+	<div class="col-xl"></div>
+
+	
+
+	<p class="theme">這幅畫象徵了什麼意義？</p>
+
+	
+
+    <input type="text" id="text3_1" value="美好">
+
+	<input type="text" id="text3_2">
+
+    <input type="text" id="text3_3">
+
+    <input type="text" id="text3_4">
+
+	
+
+	<p class="enter">填寫抽象名詞▲</p>
+
+ 
+
+</div>
+
+	
+
+	<a href="#page2"><button id="btn1">抽籤</button></a>
+
+	
+
+</div>
+
+
+
+<div id="page2"></div>
+
+	
+
+<div class="box">
+
+	  
+
+	<h1 class="six" id="t0">動動腦改改詞</h1>
+
+	<div class="name">
+
+		
+
+	<p class="move">對詩詞不滿意可進行修改▼</p>
+
+
+
+	<div>
+
+		
+
+	<div class="result"><input type="text" id="result1">
+
+	<p class="enter">修改動詞▲</p></div>
+
+	
+
+	<div class="result"><input type="text" id="result2">
+
+	<p class="enter">修改形容詞▲</p></div>
+
+	
+
+	<div class="result"><input type="text" id="result3">
+
+	<p class="enter">修改抽象名詞▲</p></div>
+
+		
+
+	</div>
+
+		
+
+	<a href="#page3"><button id="btn2">確定</button></a>
+
+		
+
+	</div>
+
+		
+
+</div>
+
+	
+
+<div id="page3"></div>
+
+	
+
+<div class="box">
+
+	
+
+<div class="outputcontainer" id="list">
+
+  
+
+<h1 class="six" id="t1">動動手組合趣</h1>
+
+	
+
+<p class="move">自由移動換位▼</p>
+
+	
+
+	<ul id="sortable" class="sortable">
+
+		<li id="list0" class="list"></li>
+
+		<li id="list1" class="list"></li>
+
+		<li id="list2" class="list"></li>
+
+		<li id="list3" class="list"></li>
+
+	</ul>
+
+	
+
+</div>
+
+	
+
+	<p class="space"></p>
+
+	
+
+<h1 class="six" id="t2">我的獨家創作</h1>
+
+ 	
+
+<div>
+
+	
+
+	<div class="name">
+
+	
+
+	<div class="result"><input type="text" id="name1">
+
+	<p class="enter">填寫詩名▲</p></div>
+
+	
+
+	<div class="result"><input type="text" id="name2">
+
+	<p class="enter">填寫作者▲</p></div>
+
+		
+
+	</div>
+
+	
+
+</div>
+
+		
+
+	<p></p>
+
+	<a href="#page4"><button id="btn3">我的第一首詩</button></a>
+
+	
+
+</div>
+
+	
+
+<div id="page4"></div>
+
+	
+
+<div class="box">
+
+	
+
+<h1 id="t3">屬於我的《畫孔雀開屏》</h1>
+
+	
+
+<div class="outputcontainer">
+
+
+
+	<div id="outputbox" onclick="block_capture()">
+
+		
+
+		<div id="imgbox"><div><img src="img/art2.jpg" alt="" width="280px"/></div></div>
+
+		
+
+		<h3 id="title"></h3>
+
+		<h5 id="poetry"></h5>
+
+		<p id="signature"></p>
+
+	</div>
+
+		
+
+</div>
+
+	
+
+	<p></p>
+
+	<div>
+
+<!--
+	<button onclick="block_capture()" id="btn4">保存圖片紀念</button>
+
+	<a href=""><button id="btn5">分享至臉書專頁</button></a>
+-->
+
+	</div>
+
+	
+
+	<p></p>
+
+	
+
+	<a href="../artall.html" id="ai"><h1>賞析其他畫作＞＞</h1></a>
+
+	
+
+</div>
+
+	
+
+</div>
+
+	
+
+	<div id="people">
+
+	
+
+	<h1 class="lll">驚煌詩色-參與製作</h1>
+
+		
+
+	<div class="namecard">
+
+	
+
+	<div id="t2box">
+
+	
+
+	<img id="t2img" src="img/teacher2.jpg" width="200px" alt=""/>
+
+	
+
+	<div><h1 id="t2name">許秀美</h1><h5 class="t">老師</h5></div>
+
+	
+<div class="text-left">
+	<div class="instruction"><p class="decorate text-center">參與</p>教案設計　　　　　　　　　　</div>
+
+	<div class="instruction"><p class="decorate text-center">學歷</p>政治大學中文研究所博士　　　</div>
+
+	<div class="instruction" id="t_2_1">臺灣師範大學國文系碩士</div>
+	<div class="instruction"><p class="decorate text-center">經歷</p>臺北市立松山家商國文科教師　</div>
+
+	<div class="instruction" id="t_2_2">政治大學師資培育中心兼任助理教授</div>
+</div>
+	
+
+	</div>
+
+		
+
+	<div id="t1box">
+
+	
+
+	<img id="t1img" src="img/teacher1.jpg" width="200px" alt=""/>
+
+		
+
+	<div><h1 id="t1name">張美雀</h1><h5 class="t">老師</h5></div>
+
+	
+
+	<div class="instruction"><p class="decorate">參與</p>AI辨識、技術指導　　　　　</div>
+
+	<div class="instruction"><p class="decorate">學歷</p>臺北科技大學技職教育研究所</div>
+
+	<div class="instruction" id="t_1_1">臺灣科技大學資訊管理系　　</div>
+
+	<div class="instruction"><p class="decorate">經歷</p>臺北市立松山家商資處科教師</div>
+
+	<div class="instruction" id="t_1_2">3A新興科技中心專案教師</div>
+
+	
+
+	</div>
+
+		
+
+	</div>
+
+		
+
+	<div class="namecard">
+
+		
+
+	<div id="wbox">
+
+	
+
+	<img id="wimg" src="img/wang.jpg" width="200px" alt=""/>
+
+	
+
+	<h1 id="wname">王劭祺</h1>
+
+	
+
+	<div class="instruction"><p class="decorate">參與</p>網頁製作設計、LOGO 設計</div>
+
+	<div class="instruction"><p class="decorate">簡介</p>喜愛交流的互動設計系學生</div>
+
+	
+
+	<div class="instruction"><p class="decorate" style="margin-left:-10px">就讀</p>國立臺北科技大學　　　  </div>
+
+	<div class="instruction"><p class="decorate" style="margin-left:10px">目標</p>3D建模設計、程式設計師　</div>
+
+	<div class="instruction"><p class="decorate">愛好</p>繪畫、歌唱、旅行　　　　</div> 
+
+		
+
+	</div>
+
+
+
+	<div id="cbox">
+
+	
+
+	<img id="cimg" src="img/chang.jpg" width="200px" alt=""/>
+
+	
+
+	<h1 id="cname">張雅淇</h1>
+
+	
+
+	<div class="instruction"><p class="decorate">參與</p>網頁製作設計、明信片設計　</div>
+
+	<div class="instruction"><p class="decorate">簡介</p>喜歡嘗試各種新事物的大學生</div>
+
+	
+
+	<div class="instruction"><p class="decorate" style="margin-left:-10px">就讀</p>國立雲林科技大學　　　　  </div>
+
+	<div class="instruction"><p class="decorate">目標</p>工業設計師　　　　　　　　</div>
+
+	<div class="instruction"><p class="decorate">愛好</p>旅遊、聽歌、玩遊戲　　　　</div>
+
+		
+
+	</div>
+
+		
+
+	</div>
+
+	
+
+	</div>
+
+
+	
+
+	<section id="description" class="text-white">
+
+	
+
+	<p class="space2"></p>
+
+		
+
+	<div class="container">
+
+		<div class="row justify-content-around">
+
+			<h1 class="lll">驚煌詩色-標誌設計理念</h1>
+
+				<div id="des_maintext" class="col-lg-5 col-12">
+
+				  <h2 class="mmm">DESCRIPTION</h2>
+
+					<p class="qita">驚煌詩色標誌設計</p>
+
+					<p class="qita">發想理念取自孩子發想及創作書寫時之動作，並以幾何抽象形式呈現。</p>
+
+					<p class="qita">應用元素發想於: 學習、兒童、詩集等。<br>
+
+					使用元素有- 「孩子」、「筆」、「書脊」。<br>
+
+					左方的4/3菱形及右下方的長線條的形象為小朋友拿著筆書寫的型態。</p>
+
+					<p class="sss">Designer-王劭祺</p>
+
+				</div>
+
+				<div class="biaozhi col-lg-5 col-10">
+
+					<img src="img/des_logo-02.png" id="logo" alt="">
+
+				</div>
+
+			<div class="row justify-content-between">
+
+				<div class="des col-lg-6 col-md-6 col-12">
+
+					<img src="img/des1-03.png" alt="">
+
+				</div>
+
+				<div class="des col-lg-6 col-md-6 col-12">
+
+					<img src="img/des2-04.png" alt="">
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+	
+
+	<div id="foot">
+
+		<img src="https://www.npm.gov.tw/images/logo.svg" alt="" height="35">
+
+		
+
+	</div>
+
+	
+
+<script>
+
+	
+
+	var btn1=document.getElementById("btn1");
+
+	var btn3=document.getElementById("btn3");
+
+	var btn4=document.getElementById("btn4");
+
+	
+
+	var name1=document.getElementById("name1");
+
+	var name2=document.getElementById("name2");
+
+	
+
+	var t0=document.getElementById("t0");
+
+	var t1=document.getElementById("t1");
+
+	var t2=document.getElementById("t2");
+
+	var t3=document.getElementById("t3");
+
+	
+
+	var bigphoto=document.getElementById("bigphoto");
+
+	
+
+	btn1.addEventListener("click",check1);
+
+
+
+	function check1(){
+
+
+
+	var noWordCount1=0;
+
+
+
+		for(var i=1;i<=4;i++){
+
+
+
+			if(document.getElementById("text1_"+i).value===""){
+
+				noWordCount1++;
+
+			};
+
+
+
+		};
+
+		
+
+		for(var i=1;i<=4;i++){
+
+
+
+			if(document.getElementById("text2_"+i).value===""){
+
+				noWordCount1++;
+
+			};
+
+
+
+		};
+
+		
+
+		for(var i=1;i<=4;i++){
+
+
+
+			if(document.getElementById("text3_"+i).value===""){
+
+				noWordCount1++;
+
+			};
+
+
+
+		};
+
+		
+
+		if(noWordCount1!=0){
+
+			t0.innerHTML="請往上滑填滿空格";
+
+			alert("請先填滿空格喔！");
+
+		}
+
+		
+
+		else if(noWordCount1===0){
+
+			t0.innerHTML="動動腦改改詞";
+
+			randomtext();
+
+		}
+
+		
+
+	};
+
+	
+
+	function randomtext(){
+
+		
+
+		for(i=1;i<4;i++){
+
+			
+
+			for(j=1;j<5;j++){
+
+				
+
+				document.getElementById("text"+i+"_"+j).style.color="#000000";
+
+				document.getElementById("text"+i+"_"+j).style.backgroundColor.rgba="255,255,255,0.7";
+
+				
+
+			}
+
+			
+
+		}
+
+		
+
+		randomtext=[];
+
+			
+
+		for(k=1;k<4;k++){
+
+			
+
+			randomtext[k]=randomNumber(4)+1;
+
+			document.getElementById("text"+k+"_"+randomtext[k]).style.color="#FFFFFF";
+
+			document.getElementById("text"+k+"_"+randomtext[k]).style.backgroundColor="#000000";
+
+			document.getElementById("result"+k).value=document.getElementById("text"+k+"_"+randomtext[k]).value;
+
+			
+
+		}
+
+		
+
+	};
+
+	btn2.addEventListener("click",tian);
+
+
+
+	function tian(){
+
+		
+
+	var noWordCount2=0;
+
+		
+
+		for(var i=1;i<=3;i++){
+
+
+
+			if(document.getElementById("result"+i).value===""){
+
+				noWordCount2++;
+
+			};
+
+
+
+		};
+
+		
+
+		if(noWordCount2!=0){
+
+			t1.innerHTML="請往上滑";
+
+			t2.innerHTML="填滿空格";
+
+			alert("請先填滿空格喔！");
+
+		}
+
+		
+
+		else if(noWordCount2===0){
+
+			t1.innerHTML="動動腦組合趣";
+
+			t2.innerHTML="我的獨家創作";
+
+			
+
+			for(k=1;k<4;k++){
+
+				document.getElementById("list"+k).innerHTML=document.getElementById("result"+k).value;
+
+			
+
+				document.getElementById("list0").innerText="海棠花下孔雀";
+
+			
+
+			}
+
+		
+
+		}
+
+			
+
+	};
+
+	
+
+	btn3.addEventListener("click",check2);
+
+	
+
+	function check2(){
+
+
+
+		if(name1.value===""){
+
+			
+
+			if(name1.value===""&&name2.value===""){
+
+				t3.innerHTML="請往上滑填寫詩名及作者";
+
+				alert("請先填寫詩名及作者喔！");
+
+			}
+
+		
+
+			else{
+
+				t3.innerHTML="請往上滑填寫詩名";
+
+				alert("請先填寫詩名喔！");
+
+			}
+
+		}
+
+		
+
+		else{
+
+			check3();
+
+		}
+
+		
+
+
+	};
+
+	
+
+	function check3(){
+
+	
+
+		if(name2.value===""){
+
+			t3.innerHTML="請往上滑填寫作者";
+
+			alert("請先填寫作者喔！");
+
+		}
+
+		
+
+		else{
+
+			t3.innerHTML="屬於我的《畫孔雀開屏》";
+
+			showtext();
+
+		}
+
+		
+
+	};
+
+	
+
+	function randomNumber(limit){
+
+		return Math.floor(Math.random()*limit);
+
+	}
+
+	
+
+	function showtext(){
+
+		
+
+		const sortableLists = document.getElementsByClassName("sortable");
+
+
+
+		document.getElementById("poetry").innerText=sortableLists[0].outerText;
+
+		
+
+		document.getElementById("title").innerText=name1.value;
+
+		
+
+		document.getElementById("title").style.fontSize="30px";
+
+		
+
+		const name = document.getElementsByClassName("name");
+
+
+
+		document.getElementById("signature").innerText="作者："+name2.value;
+
+	
+
+		document.getElementById("signature").style.fontSize="10px";
+
+		
+
+	}
+
+	
+
+	if(screen.width>=1140&&screen.width<=1332){document.getElementsByClassName("namecard").style.transform="scale(0.5)";
+
+		document.getElementsByClassName("namecard").style.margin="5px";
+
+	}
+
+	
+
+	//以下區塊為移動程式
+
+	
+//
+//	function enableDragSort(listClass) {
+//
+//		const sortableLists = document.getElementsByClassName(listClass);
+//
+//		Array.prototype.map.call(sortableLists, (list) => {enableDragList(list)});
+//
+//	}
+//
+//
+//
+//	function enableDragList(list) {
+//
+//		Array.prototype.map.call(list.children, (item) => {enableDragItem(item)});
+//
+//	}
+//
+//
+//
+//	function enableDragItem(item) {
+//
+//		item.setAttribute('draggable', true)
+//
+//		item.ondrag = handleDrag;
+//
+//		item.ondragend = handleDrop;
+//
+//	}
+//
+//
+//
+//	function handleDrag(item) {
+//
+//		const selectedItem = item.target,
+//
+//		list = selectedItem.parentNode,
+//
+//		x = event.clientX,
+//
+//		y = event.clientY;
+//
+//  
+//
+//  	selectedItem.classList.add('drag-sort-active');
+//
+//  		let swapItem = document.elementFromPoint(x, y) === null ? selectedItem : document.elementFromPoint(x, y);
+//
+//  	
+//
+//  	if (list === swapItem.parentNode) {
+//
+//		swapItem = swapItem !== selectedItem.nextSibling ? swapItem : swapItem.nextSibling;
+//
+//		list.insertBefore(selectedItem, swapItem);
+//
+//  	}
+//
+//		showtext();
+//
+//	}
+//
+//
+//
+//	function handleDrop(item) {
+//
+//		item.target.classList.remove('drag-sort-active');
+//
+//	}
+//
+//
+//
+//	(()=> {enableDragSort('drag-sort-enable')})();
+
+	
+
+//以上區塊為移動程式
+
+	
+
+//以下為下載圖片程式
+
+	
+
+	function block_capture() {
+
+		
+
+ 	html2canvas(document.querySelector("#outputbox")).then(function (canvas) {
+
+ 		a = document.createElement("a");
+
+ 		a.href= canvas.toDataURL();
+		a.download=canvas.toDataURL();
+
+ 		a.click();
+
+ 	});
+
+		
+
+	}
+
+	
+
+</script>
+
+	
+
+<script src="js/html2canvas.min.js"></script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <script src="js/popper.min.js"></script>
+
+    <script src="js/bootstrap-4.4.1.js"></script>
+
+	  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+  </script>  
+
+<script src="https://www.drv.tw/inc/wd.js?s=teiwpvzkrpaa38czjmlmtq"></script></body>
+
+</html>
+
